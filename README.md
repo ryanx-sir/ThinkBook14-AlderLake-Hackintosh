@@ -1,6 +1,18 @@
-# ThinkBook14+ 2022(AlderLake laptop) with eGPU hackintosh
+# ThinkBook14+ 2022(AlderLake laptop) hackintosh
 
-progress: 1%
+### progress: 50%
+
+## screenshot(without eGPU)
+
+![about](./img/about.jpg)
+![usb](./img/usb.jpg)
+![graphics](./img/graphics.jpg)
+![power](./img/power.jpg)
+
+## screenshot(with eGPU)
+
+![graphics1](./img/graphics_1.png)
+![pci](./img/pci.png)
 
 # Details
 
@@ -14,15 +26,18 @@ progress: 1%
 
 | Hardware     | Specification                    | Status         |
 |--------------|----------------------------------|----------------|
-| CPU          | Intel Core i7-12700H             | 🔶 In progress |
+| CPU          | Intel Core i7-12700H             | ✅ Working      |
 | RAM          | LPDDR5 32GB                      | ✅ Working      |
-| Audio        | Realtek ALC257                   | 🔶 In progress |
+| Audio        | ALC257(layout-id=99)             | ✅ Working      |
+| Microphone   | Realtek ALC257                   | 🔶 In progress |
 | WiFi         | Intel AX201                      | ✅ Working      |
 | Bluetooth    | AX201                            | ✅ Working      |
 | SSD          | SAMSUNG PM9A1 512GB              | ✅ Working      |
+| Battery      |                                  | ✅ Working      |
+| USB          | -                                | ✅ Working      |
 | Keyboard     | -                                | ✅ Working      |
 | Trackpad     | ELAN0662 I2C(force-polling mode) | ✅ Working      |
-| Webcam       | -                                | 🔶 In progress |
+| Webcam       | UVC Camera                       | ✅ Working      |
 | MicroSD Card | -                                | 🔶 In progress |
 | iGPU         | Intel Iris Xe Graphics           | ❌ Not Support  |
 | eGPU         | AMD RX560 4G (on tb3 dock)       | ✅ Working      |
@@ -30,23 +45,22 @@ progress: 1%
 # Overview
 
 It is possible to install and run macOS Ventura with eGPU(tb3 or oculink) on alder lake and newer laptops.
+without eGPU, the iGPU framebuffer not load, external displays not work, laptop LVDS brightness not work but hidpi ok.
 NOTE : eGPU do not support spoof by Whatevergreen
 
 # todo
 
-1. CFG Lock: both modGRUBShell.efi and ru.efi unlock fail: write variable failed 0x00000008
+1. CFG Lock: both modGRUBShell.efi and ru.efi unlock fail: write variable failed 0x00000008  
    0xCA60C VarStoreEFI: VarStoreId: 0x3 [B08F97FF-E6E8-4193-A997-5E9E9B0ADB32], Attrubutes: 7, Size: 379, Name: CpuSetup
    {26 23 03 00 FF 97 8F B0 E8 E6 93 41 A9 97 5E 9E 9B 0A DB 32 07 00 00 00 79 03 43 70 75 53 65 74 75 70 00}
    0xCFC8F One Of: CFG Lock, VarStoreInfo (VarOffset/VarName): 0x43, VarStore: 0x3
 
 2. CPU smc
-   The cpu fan and sensor are not working. It seems that SMCProcessor and SMCSuperIO are not effective, but the Intel
-   Power Gadget tool can read the cpu temperature normally.
+   temperature sensors not show in iStatMenus. but the Intel Power Gadget tool can read normally.
 
 # BIOS Settings
 
 * Secure Boot: Disabled
-* STAT Controller Mode: AHCI
 * Everything else defaults.
 
 # Warning!!!
