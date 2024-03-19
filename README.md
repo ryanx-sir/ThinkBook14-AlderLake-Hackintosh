@@ -24,23 +24,25 @@
 
 # Hardware Specifications
 
-| Hardware     | Specification                    | Status         |
-|--------------|----------------------------------|----------------|
-| CPU          | Intel Core i7-12700H             | ✅ Working      |
-| RAM          | LPDDR5 32GB                      | ✅ Working      |
-| Audio        | ALC257(layout-id=99)             | ✅ Working      |
-| Microphone   | Realtek ALC257                   | 🔶 In progress |
-| WiFi         | Intel AX201                      | ✅ Working      |
-| Bluetooth    | AX201                            | ✅ Working      |
-| SSD          | SAMSUNG PM9A1 512GB              | ✅ Working      |
-| Battery      |                                  | ✅ Working      |
-| USB          | -                                | ✅ Working      |
-| Keyboard     | -                                | ✅ Working      |
-| Trackpad     | ELAN0662 I2C(force-polling mode) | ✅ Working      |
-| Webcam       | UVC Camera                       | ✅ Working      |
-| MicroSD Card | -                                | 🔶 In progress |
-| iGPU         | Intel Iris Xe Graphics           | ❌ Not Support  |
-| eGPU         | AMD RX560 4G (on tb3 dock)       | ✅ Working      |
+| Hardware     | Specification                    | Status        |
+|--------------|----------------------------------|---------------|
+| CPU          | Intel Core i7-12700H             | ✅ Working     |
+| RAM          | LPDDR5 32GB                      | ✅ Working     |
+| Audio        | ALC257(layout-id=99)             | ✅ Working     |
+| Microphone   | Realtek ALC257                   | 🔶 TODO       |
+| WiFi         | Intel AX201                      | ✅ Working     |
+| Bluetooth    | AX201                            | ✅ Working     |
+| SSD          | SAMSUNG PM9A1 512GB              | ✅ Working     |
+| Battery      |                                  | ✅ Working     |
+| USB          | -                                | ✅ Working     |
+| Keyboard     | -                                | ✅ Working     |
+| Trackpad     | ELAN0662 I2C(force-polling mode) | ✅ Working     |
+| Webcam       | UVC Camera                       | ✅ Working     |
+| MicroSD Card | -                                | 🔶 TODO       |
+| iGPU         | Intel Iris Xe Graphics           | ❌ Not Support |
+| eGPU         | AMD RX560 4G (on tb3 dock)       | ✅ Working     |
+| sleep/wake   | -                                | 🔶 TODO       |
+| LVDS         | Brightness Control               | 🔶 TODO       |
 
 # Overview
 
@@ -56,7 +58,7 @@ NOTE : eGPU do not support spoof by Whatevergreen
    0xCFC8F One Of: CFG Lock, VarStoreInfo (VarOffset/VarName): 0x43, VarStore: 0x3
 
 2. CPU smc
-   temperature sensors not show in iStatMenus. but the Intel Power Gadget tool can read normally.
+   temperature sensors show in Intel Power Gadget tool but iStatMenus can't.
 
 # BIOS Settings
 
