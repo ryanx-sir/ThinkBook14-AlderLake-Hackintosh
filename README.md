@@ -47,8 +47,8 @@
 # Overview
 
 It is possible to install and run macOS Ventura with eGPU(tb3 or oculink) on alder lake and newer laptops.
-without eGPU, the iGPU framebuffer not load, external displays not work, laptop LVDS brightness not work but hidpi ok.
-NOTE : eGPU do not support spoof by Whatevergreen
+without eGPU, the iGPU framebuffer not load, laptop LVDS brightness not work but hidpi ok.
+NOTE : eGPU on tb3 do not support device spoof by Whatevergreen
 
 # todo
 
