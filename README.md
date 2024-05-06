@@ -67,7 +67,10 @@ NOTE : eGPU on tb3 do not support device spoof by Whatevergreen
 
 # Warning!!!
 
-dont't forgot change PlatformInfo in Config.plist
+* dont't forgot change PlatformInfo in Config.plist
+* do not turn on FileVault!  
+  do not turn on FileVault!  
+  do not turn on FileVault!
 
 # Post install
 
